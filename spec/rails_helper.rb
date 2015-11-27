@@ -8,9 +8,11 @@ Warden.test_mode!
 
 require 'simplecov'
 require 'simplecov-rcov'
+require 'metric_fu/metrics/rcov/simplecov_formatter'
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::RcovFormatter,
-  SimpleCov::Formatter::HTMLFormatter
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::MetricFu
   ]
 SimpleCov.start
 
