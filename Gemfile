@@ -56,5 +56,5 @@ group :test do
   gem 'capybara', '2.4.4'
 end
 
-gem 'rspec', :require => false, :group => :test
+gem 'simplecov-rcov', :require => false, :group => :test
 gem 'simplecov', :require => false, :group => :test
