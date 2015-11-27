@@ -3,15 +3,16 @@ ENV['RAILS_ENV'] ||= 'test'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
-
-require 'simplecov'
-require 'simplecov-rcov'
-SimpleCov.start
-require_relative '../string_ops'
-
 include Warden::Test::Helpers
 Warden.test_mode!
 
+require 'simplecov'
+require 'simplecov-rcov'
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::RcovFormatter,
+  SimpleCov::Formatter::HTMLFormatter
+  ]
+SimpleCov.start
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
