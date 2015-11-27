@@ -60,3 +60,5 @@ gem 'simplecov-rcov', :require => false, :group => :test
 gem 'simplecov', :require => false, :group => :test
 gem 'ci_reporter'
 gem 'metric_fu'
+gem 'rubocop', require: false
+gem 'rails_best_practices', require: false
